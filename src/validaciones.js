@@ -1,3 +1,4 @@
+
 function validarPrecio(precio) {
     if (typeof precio !== 'number') {
         return 'El precio debe ser un número';
@@ -11,4 +12,16 @@ function validarPrecio(precio) {
     return true;
 }
 
-module.exports = validarPrecio;
+function validarCorreo(correo) {
+    if (typeof correo !== 'string') {
+        return 'El correo debe ser una cadena de texto';
+    }
+    // Expresión regular simple para validar correos electrónicos
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!regex.test(correo)) {
+        return 'Correo inválido';
+    }
+    return true;
+}
+
+module.exports = { validarPrecio, validarCorreo };

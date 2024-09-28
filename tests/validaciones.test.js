@@ -1,4 +1,4 @@
-const validarPrecio = require('../src/validaciones');
+const {validarPrecio} = require('../src/validaciones');
 
 describe('Pruebas para la función validarPrecio', () => {
 
